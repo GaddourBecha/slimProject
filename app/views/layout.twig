@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">SlimApp</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path_for('home_page') }}">Home</a></li>
+                <li><a href="{{ path_for('auth_sign_up') }}">Sign Up</a></li>
+                <li><a href="{{ path_for('auth_sign_in') }}">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>
